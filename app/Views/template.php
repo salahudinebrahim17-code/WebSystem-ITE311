@@ -45,8 +45,8 @@
     <!-- Enhanced Bootstrap Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="bi bi-code-slash"></i> ITE311 WebSystem
+            <a class="navbar-brand" href="<?= base_url() ?>">
+                ITE311 WebSystem
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -54,20 +54,45 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">
-                            <i class="bi bi-house-door"></i> Home
+                        <a class="nav-link active" aria-current="page" href="<?= base_url() ?>">
+                            Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="bi bi-person-circle"></i> About
+                        <a class="nav-link" href="<?= base_url('about') ?>">
+                            About
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="bi bi-envelope"></i> Contact
+                        <a class="nav-link" href="<?= base_url('contact') ?>">
+                            Contact
                         </a>
                     </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <?php if (session()->get('isLoggedIn')): ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('dashboard') ?>">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('logout') ?>">
+                                Logout
+                            </a>
+                        </li>
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('login') ?>">
+                                Login
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('register') ?>">
+                                Register
+                            </a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
@@ -78,9 +103,6 @@
         <div class="row">
             <div class="col-12">
                 <h1 class="display-4">Welcome to ITE311 WebSystem</h1>
-                <p class="lead">A modern Bootstrap-integrated CodeIgniter 4 application.</p>
-                <hr class="my-4">
-                <p>This is a clean and professional web application built with Bootstrap and CodeIgniter.</p>
             </div>
         </div>
     </div>
