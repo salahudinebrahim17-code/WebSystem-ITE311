@@ -3,29 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITE311 Project</title>
+    <title>ITE311 WebSystem</title>
     
     <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaJSK0LHAIBVdERTM0EaCXcQ3fygGxWQtHDZ2MIRVn4mP7tKUcYKlMxUcwfx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <style>
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffc107 !important;
+            transform: translateY(-2px);
+        }
+        .navbar-nav .nav-link.active {
+            color: #ffc107 !important;
+        }
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-outline-light:hover {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: #000;
+        }
+    </style>
 </head>
 <body>
-    <!-- Bootstrap Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Enhanced Bootstrap Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">ITE311 Project</a>
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-code-slash"></i> ITE311 WebSystem
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <i class="bi bi-house-door"></i> Home
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-person-circle"></i> About
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-envelope"></i> Contact
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -36,16 +77,15 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-12">
-                <h1 class="display-4">Welcome to ITE311 Project</h1>
-                <p class="lead">This is a Bootstrap-integrated CodeIgniter 4 application.</p>
+                <h1 class="display-4">Welcome to ITE311 WebSystem</h1>
+                <p class="lead">A modern Bootstrap-integrated CodeIgniter 4 application.</p>
                 <hr class="my-4">
-                <p>Bootstrap has been successfully integrated into the project template.</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                <p>This is a clean and professional web application built with Bootstrap and CodeIgniter.</p>
             </div>
         </div>
     </div>
 
     <!-- Bootstrap JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
